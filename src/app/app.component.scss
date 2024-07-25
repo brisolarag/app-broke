@@ -1,0 +1,45 @@
+$hf-heigth: 50px;
+
+#content {
+    display: flex;
+    flex-direction: column;
+
+    width: 100vw;
+    height: 100vh;
+    background-color: bisque;
+}
+
+header {
+    width: 100%;
+    background-color: blue;
+    height: $hf-heigth;
+}
+
+main {
+    background-color: yellow;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    flex: 1;
+    aside, section {
+        height: 100%;
+        display: flex;
+    }
+    aside {
+        background-color: green;
+        width: 20%;
+    }
+    section {
+        background-color: blueviolet;
+        flex: 1;
+    }
+}
+
+
+footer {
+    width: 100%;
+    background-color: red;
+    height: $hf-heigth;
+}
+
+
