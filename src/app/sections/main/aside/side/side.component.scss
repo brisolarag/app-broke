@@ -1,0 +1,37 @@
+#aside-component {
+  display: flex;
+  padding: 10px;
+  flex-direction: column;
+}
+
+.hide {
+  display: none;
+}
+
+.main {
+  display: flex;
+  width: 100%;
+}
+.secondaries {
+  display: none;
+  width: calc(100% - 30px);
+  margin-left: 30px;
+}
+
+.item {
+  margin-bottom: 5px;
+  background-color: #ff8225;
+  border-radius: 5px;
+  height: 50px;
+  align-items: center;
+  justify-content: left;
+  border: none;
+  span {
+    margin-left: 5px;
+  }
+}
+
+.expand {
+  display: flex;
+  width: 100%;
+}

@@ -1,0 +1,16 @@
+<div id="aside-component">
+  <div class="top"></div>
+
+  <div class="bottom">
+    <button id="s-account" class="item main" (click)="toggleAccount()">
+      <i class="bi bi-caret-right-fill" [class.hide]="account"></i>
+      <i class="bi bi-caret-down" [class.hide]="!account"></i>
+      <span>Account</span>
+    </button>
+
+    <button class="item secondaries" [class.d-flex]="account">
+      <i class="bi bi-circle"></i>
+      <span>Details</span>
+    </button>
+  </div>
+</div>
