@@ -8,10 +8,14 @@ import { Component } from '@angular/core';
   styleUrl: './side.component.scss',
 })
 export class SideComponent {
-  // drops
-  account: boolean = false;
+  isCollapsed: { [key: string]: boolean } = {
+    home: true,
+    dashboard: true,
+    insert: true,
+    account: true,
+  };
 
-  toggleAccount() {
-    this.account = !this.account;
+  toggleCollapse(section: string): void {
+    this.isCollapsed[section] = !this.isCollapsed[section];
   }
 }

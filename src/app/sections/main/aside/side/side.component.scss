@@ -11,21 +11,21 @@
 .main {
   display: flex;
   width: 100%;
+  background-color: #dfd3c3;
 }
 .secondaries {
   display: none;
   width: calc(100% - 30px);
   margin-left: 30px;
+  background-color: #f8ede3;
 }
 
 .item {
   margin-bottom: 5px;
-  background-color: #ff8225;
-  border-radius: 5px;
+  border: none;
   height: 50px;
   align-items: center;
   justify-content: left;
-  border: none;
   span {
     margin-left: 5px;
   }
@@ -34,4 +34,9 @@
 .expand {
   display: flex;
   width: 100%;
+}
+
+#collapse-menu {
+  border-radius: 50%;
+  border: none;
 }

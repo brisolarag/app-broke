@@ -1,16 +1,194 @@
-<div id="aside-component">
-  <div class="top"></div>
+<div class="flex-shrink-0 p-3" style="width: 280px">
+  <a
+    href="/"
+    class="d-flex align-items-center pb-3 mb-3 link-body-emphasis text-decoration-none border-bottom"
+  >
+    <button id="collapse-menu" class="me-3"><i class="bi bi-list"></i></button>
+    <span class="fs-5 fw-semibold">Menu</span>
+  </a>
+  <ul class="list-unstyled ps-0">
+    <li class="mb-1">
+      <button
+        class="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed"
+        data-bs-toggle="collapse"
+        data-bs-target="#home-collapse"
+        aria-expanded="true"
+        (click)="toggleCollapse('home')"
+      >
+        <i
+          [className]="
+            isCollapsed['home']
+              ? 'bi me-2 bi-caret-right-fill'
+              : 'bi me-2 bi-caret-down'
+          "
+        ></i>
+        Home
+      </button>
 
-  <div class="bottom">
-    <button id="s-account" class="item main" (click)="toggleAccount()">
-      <i class="bi bi-caret-right-fill" [class.hide]="account"></i>
-      <i class="bi bi-caret-down" [class.hide]="!account"></i>
-      <span>Account</span>
-    </button>
-
-    <button class="item secondaries" [class.d-flex]="account">
-      <i class="bi bi-circle"></i>
-      <span>Details</span>
-    </button>
-  </div>
+      <div class="collapse" id="home-collapse">
+        <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+          <li>
+            <a
+              href="#"
+              class="link-body-emphasis d-inline-flex text-decoration-none rounded"
+              >Overview</a
+            >
+          </li>
+          <li>
+            <a
+              href="#"
+              class="link-body-emphasis d-inline-flex text-decoration-none rounded"
+              >Updates</a
+            >
+          </li>
+          <li>
+            <a
+              href="#"
+              class="link-body-emphasis d-inline-flex text-decoration-none rounded"
+              >Reports</a
+            >
+          </li>
+        </ul>
+      </div>
+    </li>
+    <li class="mb-1">
+      <button
+        class="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed"
+        data-bs-toggle="collapse"
+        data-bs-target="#dashboard-collapse"
+        aria-expanded="false"
+        (click)="toggleCollapse('dashboard')"
+      >
+        <i
+          [className]="
+            isCollapsed['dashboard']
+              ? 'bi me-2 bi-caret-right-fill'
+              : 'bi me-2 bi-caret-down'
+          "
+        ></i>
+        Dashboard
+      </button>
+      <div class="collapse" id="dashboard-collapse">
+        <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+          <li>
+            <a
+              href="#"
+              class="link-body-emphasis d-inline-flex text-decoration-none rounded"
+              >Overview</a
+            >
+          </li>
+          <li>
+            <a
+              href="#"
+              class="link-body-emphasis d-inline-flex text-decoration-none rounded"
+              >Weekly</a
+            >
+          </li>
+          <li>
+            <a
+              href="#"
+              class="link-body-emphasis d-inline-flex text-decoration-none rounded"
+              >Monthly</a
+            >
+          </li>
+          <li>
+            <a
+              href="#"
+              class="link-body-emphasis d-inline-flex text-decoration-none rounded"
+              >Annually</a
+            >
+          </li>
+        </ul>
+      </div>
+    </li>
+    <li class="mb-1">
+      <!-- INSERT SECTION -->
+      <button
+        class="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed"
+        data-bs-toggle="collapse"
+        data-bs-target="#orders-collapse"
+        aria-expanded="false"
+        (click)="toggleCollapse('insert')"
+      >
+        <i
+          [className]="
+            isCollapsed['insert']
+              ? 'bi me-2 bi-caret-right-fill'
+              : 'bi me-2 bi-caret-down'
+          "
+        ></i>
+        Insert
+      </button>
+      <div class="collapse" id="orders-collapse">
+        <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+          <li>
+            <a
+              href="#"
+              class="link-body-emphasis d-inline-flex text-decoration-none rounded"
+              >Entry</a
+            >
+          </li>
+          <li>
+            <a
+              href="#"
+              class="link-body-emphasis d-inline-flex text-decoration-none rounded"
+              >Out</a
+            >
+          </li>
+          <li>
+            <a
+              href="#"
+              class="link-body-emphasis d-inline-flex text-decoration-none rounded"
+              >Other</a
+            >
+          </li>
+        </ul>
+      </div>
+    </li>
+    <li class="border-top my-3"></li>
+    <li class="mb-1">
+      <!-- ACCOUNT SECTION -->
+      <button
+        class="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed"
+        data-bs-toggle="collapse"
+        data-bs-target="#account-collapse"
+        aria-expanded="false"
+        (click)="toggleCollapse('account')"
+      >
+        <i
+          [className]="
+            isCollapsed['account']
+              ? 'bi me-2 bi-caret-right-fill'
+              : 'bi me-2 bi-caret-down'
+          "
+        ></i>
+        Account
+      </button>
+      <div class="collapse" id="account-collapse">
+        <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+          <li>
+            <a
+              href="#"
+              class="link-body-emphasis d-inline-flex text-decoration-none rounded"
+              >Profile</a
+            >
+          </li>
+          <li>
+            <a
+              href="#"
+              class="link-body-emphasis d-inline-flex text-decoration-none rounded"
+              >Settings</a
+            >
+          </li>
+          <li>
+            <a
+              href="#"
+              class="link-body-emphasis d-inline-flex text-decoration-none rounded"
+              >Sign out
+            </a>
+          </li>
+        </ul>
+      </div>
+    </li>
+  </ul>
 </div>
