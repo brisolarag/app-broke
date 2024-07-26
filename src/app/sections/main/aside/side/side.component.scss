@@ -1,0 +1,42 @@
+#aside-component {
+  display: flex;
+  padding: 10px;
+  flex-direction: column;
+}
+
+.hide {
+  display: none;
+}
+
+.main {
+  display: flex;
+  width: 100%;
+  background-color: #dfd3c3;
+}
+.secondaries {
+  display: none;
+  width: calc(100% - 30px);
+  margin-left: 30px;
+  background-color: #f8ede3;
+}
+
+.item {
+  margin-bottom: 5px;
+  border: none;
+  height: 50px;
+  align-items: center;
+  justify-content: left;
+  span {
+    margin-left: 5px;
+  }
+}
+
+.expand {
+  display: flex;
+  width: 100%;
+}
+
+#collapse-menu {
+  border-radius: 50%;
+  border: none;
+}

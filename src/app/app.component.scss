@@ -1,45 +1,57 @@
 $hf-heigth: 50px;
 
 #content {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 
-    width: 100vw;
-    height: 100vh;
-    background-color: bisque;
+  width: 100vw;
+  height: 100vh;
 }
 
 header {
+  width: 100%;
+  height: $hf-heigth;
+  * {
     width: 100%;
-    background-color: blue;
-    height: $hf-heigth;
+    height: 100%;
+  }
 }
 
 main {
-    background-color: yellow;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  flex: 1;
+  aside,
+  section {
+    height: 100%;
     display: flex;
-    flex-direction: row;
-    width: 100%;
+  }
+  aside {
+    width: 20%;
+    background-color: #ebf4f6;
+    border-radius: 0 50px 50px 0;
+    * {
+      width: 100%;
+      height: 100%;
+    }
+  }
+  section {
+    background-color: blueviolet;
     flex: 1;
-    aside, section {
-        height: 100%;
-        display: flex;
+    * {
+      width: 100%;
+      height: 100%;
     }
-    aside {
-        background-color: green;
-        width: 20%;
-    }
-    section {
-        background-color: blueviolet;
-        flex: 1;
-    }
+  }
 }
-
 
 footer {
+  width: 100%;
+  background-color: red;
+  height: $hf-heigth;
+  * {
     width: 100%;
-    background-color: red;
-    height: $hf-heigth;
+    height: 100%;
+  }
 }
-
-
